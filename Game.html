@@ -2,6 +2,16 @@
 
 <head>
   <title>The Hunt</title>
+  <script>
+    src = "Player.js"
+  </script>
+  <script>
+    src = "enemy.js"
+  </script>
+  <script>
+    src = "Coin.js"
+  </script>
+
   <style>
     html {
       background-color: darkgray;
@@ -22,13 +32,40 @@
     var canvas, canvasContext;
 
     window.onload = function () {
-      canvas = document.getElementById('gamecanvas');
+      canvas = document.getElementById('gameCanvas');
       canvasContext = canvas.getContext('2d');
 
+      document.addEventListener('keydown', keyPressed);
+      document.addEventListener('keyup', keyReleased);
+
       setInterval(mainloop, 1000 / speeded);
+    } //end func
 
-    }//end func
 
-    
+    var difficulty = '';
+    var username = '';
+    var pass = false;
+    var speeded = 0;
+    // while (pass == false) {
+    //     username = prompt('username');
+
+    //     difficulty = prompt('how hard do you want it?', 'easy medium or hard');
+    //     if (difficulty == 'easy' || difficulty == 'medium' || difficulty == 'hard') {
+    //         pass = true;
+    //     }
+    // }
+
+    if (difficulty == 'easy') { // easy difculty
+      speeded = 10;
+    }
+
+    if (difficulty == 'medium') { // medium difculty
+      speeded = 20;
+    }
+
+    if (difficulty == 'hard') { // hard difculty
+      speeded = 30;
+    }
+
   </script>
 </body>
