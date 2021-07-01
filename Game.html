@@ -1,0 +1,34 @@
+<!doctype html>
+
+<head>
+  <title>The Hunt</title>
+  <style>
+    html {
+      background-color: darkgray;
+    }
+
+    canvas {
+      display: block;
+      margin: 8vh auto;
+      z-index: 1;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="gameCanvas" width="800" height="600"></canvas>
+  <script>
+    var canvas, canvasContext;
+
+    window.onload = function () {
+      canvas = document.getElementById('gamecanvas');
+      canvasContext = canvas.getContext('2d');
+
+      setInterval(mainloop, 1000 / speeded);
+
+    }//end func
+
+    
+  </script>
+</body>
